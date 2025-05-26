@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [myTestSuite]">
+  <parameter name="browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="listeners.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="myTest(failed)">
+    <classes>
+      <class name="testScripts.CategoryTest">
+        <methods>
+          <include name="initialiseBrowser"/>
+          <include name="driverQuit"/>
+          <include name="verifyChangeCategoryStatusSuccessfully"/>
+        </methods>
+      </class> <!-- testScripts.CategoryTest -->
+    </classes>
+  </test> <!-- myTest(failed) -->
+</suite> <!-- Failed suite [myTestSuite] -->
