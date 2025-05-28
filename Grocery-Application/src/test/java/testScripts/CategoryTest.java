@@ -16,7 +16,7 @@
 		HomePage homepage;
 		CategoryPage category;
 	
-		@Test(priority = 1)
+		@Test(priority = 1,groups= {"smoke"})
 		public void verifyAddNewCategoryWithValidDetails() throws IOException {
 			loginpage = new LoginPage(driver);
 	
@@ -66,7 +66,7 @@
 	
 		}
 	
-		@Test(priority = 4)
+		@Test(priority = 4,groups={"smoke"})
 	
 		public void verifyEditCategoryWithValidDetails() throws IOException {
 			loginpage = new LoginPage(driver);
@@ -92,7 +92,7 @@
 			            "Test failed: Status badge did not toggle correctly between Active and Inactive.");
 		}
 		
-		@Test(priority = 6)
+		@Test(priority = 6,groups={"smoke"})
 	
 		public void verifyDeleteCategoryItemSuccessfully() throws IOException {
 			loginpage = new LoginPage(driver);

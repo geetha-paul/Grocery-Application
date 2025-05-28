@@ -32,7 +32,8 @@ public class ManageNewsPage {
 	
 	@FindBy(xpath="//a[@class='btn btn-sm btn btn-danger btncss']")
 	WebElement deleteButton;
-	
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement successAlert;
 	
 	
 	public ManageNewsPage clickOnNewButton() {
@@ -69,4 +70,8 @@ public class ManageNewsPage {
 		generalutility.acceptAlert();
 		return this;
 	}
+	public boolean isSuccessAlertDisplayed() {
+	    
+        return successAlert.isDisplayed();
+}
 }

@@ -14,11 +14,11 @@
 </class>-->
 <!--<class name="testScripts.CategoryTest">
 </class>-->
-<class name="testScripts.ManageContactTest">
-</class>
-
-<!--<class name="testScripts.ManageNewsTest">
+<!--<class name="testScripts.ManageContactTest">
 </class>-->
+
+<class name="testScripts.ManageNewsTest">
+</class>
 
 
 </classes>

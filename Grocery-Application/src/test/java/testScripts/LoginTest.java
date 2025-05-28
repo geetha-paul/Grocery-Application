@@ -13,7 +13,7 @@ import pages.LoginPage;
 public class LoginTest extends BaseClass {
 	
 	LoginPage login;
-  @Test
+  @Test(groups="smoke")
 	public void loginWithValidCredentials() throws IOException {
 	 LoginPage login= new LoginPage(driver);
 	 /* login.enterUsername("admin");

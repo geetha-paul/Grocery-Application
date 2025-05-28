@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-25T23:21:38 IST" name="myTestSuite" finished-at="2025-05-25T23:22:06 IST" duration-ms="28058">
+  <suite started-at="2025-05-27T21:02:03 IST" name="Grouping" finished-at="2025-05-27T21:02:29 IST" duration-ms="25937">
     <groups>
     </groups>
-    <test started-at="2025-05-25T23:21:38 IST" name="myTest" finished-at="2025-05-25T23:22:06 IST" duration-ms="28058">
-      <class name="testScripts.ManageContactTest">
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:21:38 IST" name="initialiseBrowser" finished-at="2025-05-25T23:21:45 IST" duration-ms="6917" status="PASS">
+    <test started-at="2025-05-27T21:02:03 IST" name="myTest" finished-at="2025-05-27T21:02:29 IST" duration-ms="25937">
+      <class name="testScripts.CategoryTest">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:03 IST" name="initialiseBrowser" finished-at="2025-05-27T21:02:09 IST" duration-ms="5527" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="verifyMandatoryFieldsValidationInEditContact()[pri:1, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:21:45 IST" name="verifyMandatoryFieldsValidationInEditContact" finished-at="2025-05-25T23:21:48 IST" duration-ms="3853" status="PASS">
+        <test-method signature="verifySearchCategoryWithValidKeyword()[pri:2, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:09 IST" name="verifySearchCategoryWithValidKeyword" finished-at="2025-05-27T21:02:13 IST" duration-ms="4400" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyMandatoryFieldsValidationInEditContact -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:21:48 IST" name="driverQuit" finished-at="2025-05-25T23:21:49 IST" duration-ms="301" status="PASS">
+        </test-method> <!-- verifySearchCategoryWithValidKeyword -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:13 IST" name="driverQuit" finished-at="2025-05-27T21:02:14 IST" duration-ms="191" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyMandatoryFieldsValidationInEditContact status=SUCCESS method=ManageContactTest.verifyMandatoryFieldsValidationInEditContact()[pri:1, instance:testScripts.ManageContactTest@606e4010] output={null}]]]>
+                <![CDATA[[TestResult name=verifySearchCategoryWithValidKeyword status=SUCCESS method=CategoryTest.verifySearchCategoryWithValidKeyword()[pri:2, instance:testScripts.CategoryTest@4d9e68d0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:21:49 IST" name="initialiseBrowser" finished-at="2025-05-25T23:21:54 IST" duration-ms="5383" status="PASS">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:14 IST" name="initialiseBrowser" finished-at="2025-05-27T21:02:18 IST" duration-ms="4607" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,22 +44,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="verifyEditContactWithValidDetails()[pri:2, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:21:54 IST" name="verifyEditContactWithValidDetails" finished-at="2025-05-25T23:21:58 IST" duration-ms="3400" status="PASS">
+        <test-method signature="verifyResetSearchFunctionality()[pri:3, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:18 IST" name="verifyResetSearchFunctionality" finished-at="2025-05-27T21:02:21 IST" duration-ms="3092" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyEditContactWithValidDetails -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:21:58 IST" name="driverQuit" finished-at="2025-05-25T23:21:58 IST" duration-ms="230" status="PASS">
+        </test-method> <!-- verifyResetSearchFunctionality -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:21 IST" name="driverQuit" finished-at="2025-05-27T21:02:21 IST" duration-ms="179" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyEditContactWithValidDetails status=SUCCESS method=ManageContactTest.verifyEditContactWithValidDetails()[pri:2, instance:testScripts.ManageContactTest@606e4010] output={null}]]]>
+                <![CDATA[[TestResult name=verifyResetSearchFunctionality status=SUCCESS method=CategoryTest.verifyResetSearchFunctionality()[pri:3, instance:testScripts.CategoryTest@4d9e68d0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:21:58 IST" name="initialiseBrowser" finished-at="2025-05-25T23:22:04 IST" duration-ms="5911" status="PASS">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:21 IST" name="initialiseBrowser" finished-at="2025-05-27T21:02:26 IST" duration-ms="4700" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,22 +70,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="verifyResetEditContactFormFunctionality()[pri:3, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:22:04 IST" name="verifyResetEditContactFormFunctionality" finished-at="2025-05-25T23:22:05 IST" duration-ms="1771" status="PASS">
+        <test-method signature="verifyChangeCategoryStatusSuccessfully()[pri:5, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:26 IST" name="verifyChangeCategoryStatusSuccessfully" finished-at="2025-05-27T21:02:29 IST" duration-ms="2896" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyResetEditContactFormFunctionality -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.ManageContactTest@606e4010]" started-at="2025-05-25T23:22:05 IST" name="driverQuit" finished-at="2025-05-25T23:22:06 IST" duration-ms="209" status="PASS">
+        </test-method> <!-- verifyChangeCategoryStatusSuccessfully -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.CategoryTest@4d9e68d0]" started-at="2025-05-27T21:02:29 IST" name="driverQuit" finished-at="2025-05-27T21:02:29 IST" duration-ms="257" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyResetEditContactFormFunctionality status=SUCCESS method=ManageContactTest.verifyResetEditContactFormFunctionality()[pri:3, instance:testScripts.ManageContactTest@606e4010] output={null}]]]>
+                <![CDATA[[TestResult name=verifyChangeCategoryStatusSuccessfully status=SUCCESS method=CategoryTest.verifyChangeCategoryStatusSuccessfully()[pri:5, instance:testScripts.CategoryTest@4d9e68d0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testScripts.ManageContactTest -->
+      </class> <!-- testScripts.CategoryTest -->
     </test> <!-- myTest -->
-  </suite> <!-- myTestSuite -->
+  </suite> <!-- Grouping -->
 </testng-results>

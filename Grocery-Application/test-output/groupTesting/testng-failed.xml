@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [groupTesting]">
+  <test thread-count="5" name="myTest(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testScripts.CategoryTest">
+        <methods>
+          <include name="verifyAddNewCategoryWithValidDetails"/>
+          <include name="verifyDeleteCategoryItemSuccessfully"/>
+          <include name="verifyEditCategoryWithValidDetails"/>
+        </methods>
+      </class> <!-- testScripts.CategoryTest -->
+    </classes>
+  </test> <!-- myTest(failed) -->
+</suite> <!-- Failed suite [groupTesting] -->

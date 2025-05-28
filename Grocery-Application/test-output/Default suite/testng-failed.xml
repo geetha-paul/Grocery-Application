@@ -3,15 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.ManageNewsTest">
+      <class name="testScripts.CategoryTest">
         <methods>
+          <include name="verifyResetSearchFunctionality"/>
           <include name="initialiseBrowser"/>
+          <include name="verifyAddNewCategoryWithValidDetails"/>
+          <include name="verifyDeleteCategoryItemSuccessfully"/>
+          <include name="verifyEditCategoryWithValidDetails"/>
           <include name="driverQuit"/>
-          <include name="verifyEnteringNewsInformation"/>
-          <include name="verifyUpdatingNewsInformation"/>
-          <include name="verifyDeletingNewsInformation"/>
+          <include name="verifySearchCategoryWithValidKeyword"/>
+          <include name="verifyChangeCategoryStatusSuccessfully"/>
         </methods>
-      </class> <!-- testScripts.ManageNewsTest -->
+      </class> <!-- testScripts.CategoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
