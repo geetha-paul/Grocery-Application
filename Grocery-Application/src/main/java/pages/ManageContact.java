@@ -10,11 +10,12 @@ import utilities.GeneralUtilities;
 public class ManageContact {
 
 	public WebDriver driver;
-	GeneralUtilities generalutility = new GeneralUtilities(driver);
+	GeneralUtilities generalutility;
 
 	public ManageContact(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		 generalutility = new GeneralUtilities(driver);
 	}
 
 	@FindBy(xpath = "//a[@role='button']")
@@ -33,14 +34,14 @@ public class ManageContact {
 	WebElement updateButton;
 	@FindBy(xpath = "//a[text()='Reset']")
 	WebElement resetButton;
-	@FindBy(xpath="//h4[text()='Contact Us']") 
+	@FindBy(xpath = "//h4[text()='Contact Us']")
 	WebElement contactTitle;
-	
+
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement successAlert;
 
 	public ManageContact clickOnEditButton() {
-		
+
 		generalutility.clickJavaScriptExecutor(editContact, driver);
 		return this;
 	}
@@ -55,14 +56,14 @@ public class ManageContact {
 		deliveryTimeField.clear();
 
 		deliveryChargeLimitField.clear();
-		
+
 		generalutility.clickJavaScriptExecutor(updateButton, driver);
 
 		return this;
 	}
 
 	public ManageContact editFormFields(String phoneNumber, String email, String address, String delTime,
-		String delLimit) {
+			String delLimit) {
 		phoneNumberField.clear();
 		phoneNumberField.sendKeys(phoneNumber);
 		emailField.clear();
@@ -75,17 +76,20 @@ public class ManageContact {
 		deliveryChargeLimitField.sendKeys(delLimit);
 		generalutility.clickJavaScriptExecutor(updateButton, driver);
 		return this;
-	} 
+	}
+
 	public ManageContact resetContact() {
 		generalutility.clickJavaScriptExecutor(resetButton, driver);
 		return this;
 	}
+
 	public boolean isEditSuccessAlertDisplayed() {
-	    
-        return successAlert.isDisplayed();
-}
+
+		return successAlert.isDisplayed();
+	}
+
 	public boolean isContactTitleDisplayed() {
-	    
-        return contactTitle.isDisplayed();
-}
+
+		return contactTitle.isDisplayed();
+	}
 }
