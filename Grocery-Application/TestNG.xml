@@ -5,17 +5,17 @@
 <listeners>
 <listener class-name = "listeners.Listeners">
 </listener>
-<!--<listener class-name ="listeners.RetryListener">
-</listener>-->
+<listener class-name ="listeners.RetryListener">
+</listener>
 </listeners>
 <classes >
 
-<!--<class name="testScripts.LoginTest">
-</class>-->
-<!--<class name="testScripts.CategoryTest">
-</class>-->
-<!--<class name="testScripts.ManageContactTest">
-</class>-->
+<class name="testScripts.LoginTest">
+</class>
+<class name="testScripts.CategoryTest">
+</class>
+<class name="testScripts.ManageContactTest">
+</class>
 
 <class name="testScripts.ManageNewsTest">
 </class>

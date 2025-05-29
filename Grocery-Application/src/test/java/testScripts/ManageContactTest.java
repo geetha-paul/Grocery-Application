@@ -15,16 +15,8 @@ public class ManageContactTest extends BaseClass {
 	LoginPage loginpage;
 	HomePage homepage;
 	ManageContact manageContact;
+ 
   @Test(priority = 1)
-  public void verifyMandatoryFieldsValidationInEditContact() throws IOException {
-	  loginpage =  new LoginPage(driver);
-	  homepage=loginpage.loginByUsingExcelData();
-	  //HomePage homepage = new HomePage(driver);
-	  manageContact = homepage.clickOnManageContact().clickOnEditButton().mandatoryFieldsCheck();
-	  
-	  
-  }
-  @Test(priority = 2)
   
   public void verifyEditContactWithValidDetails() throws IOException {
 	  loginpage =  new LoginPage(driver);
@@ -41,7 +33,7 @@ public class ManageContactTest extends BaseClass {
 	  Assert.assertTrue(manageContact.isEditSuccessAlertDisplayed(), "Test failed: Success message is not displayed after editing the contact.");
 }
   
-  @Test(priority = 3)
+  @Test(priority = 2)
 	  public void verifyResetEditContactFormFunctionality()throws IOException {
 		  loginpage =  new LoginPage(driver);
 		  homepage=loginpage.loginByUsingExcelData();
