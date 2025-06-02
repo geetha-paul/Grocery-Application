@@ -31,9 +31,8 @@ public class LoginTest extends BaseClass {
 
 	public void loginWithInvalidUsername() {
 		login = new LoginPage(driver);
-		login.enterUsername("admin1").enterPassword("admin21").clickSignInButton();
-		// login.enterPassword("admin21");
-		// login.clickSignInButton();
+		login.enterUsername("admin1").enterPassword("admin21").clickSignInButton();//chaining of methods
+		
 		boolean alertMessageForInvalidLogin = login.alertMessageForInvalidLogin();
 		Assert.assertTrue(alertMessageForInvalidLogin, "Login successful for invalid username");
 	}
