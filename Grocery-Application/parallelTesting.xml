@@ -1,28 +1,27 @@
- <suite name="parallelTesting" parallel="tests" thread-count="2"> 
-  
- 	<test name="myTest1" thread-count="5"> 
- 		<parameter name="browser" value="Chrome"> 
- 		</parameter> 
-  
- 		<classes> 
- 			<class name="testScript.LoginTest"> 
- 			</class> 
-  
-  
- 		</classes> 
- 	</test> 
-  
- 	<test name="myTest2" thread-count="5"> 
- 		<parameter name="browser" value="Chrome"> 
- 		</parameter> 
-  
- 		<classes> 
- 			<class name="testScript.CategoryTest"> 
- 			</class> 
-  
-  
- 		</classes> 
- 	</test> 
-  
-  
- </suite>
+<suite name="parallelTesting" parallel="tests" thread-count="2">
+
+	<test name="myTest1" thread-count="5">
+		<parameter name="browser" value="Chrome">
+		</parameter>
+
+		<classes>
+			<class name="testScript.LoginTest">
+			</class>
+
+		</classes>
+	</test>
+
+	<test name="myTest2" thread-count="5">
+		<parameter name="browser" value="Chrome">
+		</parameter>
+
+		<classes>
+			<class name="testScript.CategoryTest">
+			</class>
+
+
+		</classes>
+	</test>
+
+
+</suite>

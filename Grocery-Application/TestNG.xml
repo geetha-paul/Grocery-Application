@@ -1,27 +1,27 @@
-<suite name= "myTestSuite" >
-<parameter name ="browser" value ="Chrome">
-</parameter>
-<test name= "myTest">
-<listeners>
-<listener class-name = "listeners.Listeners">
-</listener>
-<listener class-name ="listeners.RetryListener">
-</listener>
-</listeners>
-<classes >
+<suite name="myTestSuite">
+	<parameter name="browser" value="Chrome">
+	</parameter>
+	<test name="myTest">
+		<listeners>
+			<listener class-name="listeners.Listeners">
+			</listener>
+			<listener class-name="listeners.RetryListener">
+			</listener>
+		</listeners>
+		<classes>
 
-<class name="testScripts.LoginTest">
-</class>
-<class name="testScripts.CategoryTest">
-</class>
-<class name="testScripts.ManageContactTest">
-</class>
+			<class name="testScripts.LoginTest">
+			</class>
+			<class name="testScripts.CategoryTest">
+			</class>
+			<class name="testScripts.ManageContactTest">
+			</class>
 
-<class name="testScripts.ManageNewsTest">
-</class>
+			<class name="testScripts.ManageNewsTest">
+			</class>
 
 
-</classes>
-</test>
+		</classes>
+	</test>
 
 </suite>

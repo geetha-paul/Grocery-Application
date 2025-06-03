@@ -1,14 +1,14 @@
 <suite name="Grouping">
 	<parameter name="browser" value="Chrome"></parameter>
-<test name="myTest">
-	  <groups>
-		  <run>
-			  <exclude name="smoke"></exclude>
-		  </run>
-	  </groups>
-    <classes>
-      <class name="testScripts.CategoryTest">  
-		 </class> 
-    </classes>
- </test>
+	<test name="myTest">
+		<groups>
+			<run>
+				<exclude name="smoke"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="testScripts.CategoryTest">
+			</class>
+		</classes>
+	</test>
 </suite>

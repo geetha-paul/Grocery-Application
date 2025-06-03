@@ -17,35 +17,30 @@ public class LoginTest extends BaseClass {
 	@Test(groups = "smoke")
 	public void loginWithValidCredentials() throws IOException {
 		LoginPage login = new LoginPage(driver);
-		/*
-		 * login.enterUsername("admin"); login.enterPassword("admin");
-		 * login.clickSignInButton();
-		 */
+
 		login.loginByUsingExcelData();
 		boolean isHomePageLoaded = login.isHomePageLoaded();
 
-		Assert.assertTrue(isHomePageLoaded, Constant.lp_verifyLoginWithValidData);
+		Assert.assertTrue(isHomePageLoaded, Constant.lp_verify_login_with_valid_data);
 	}
 
 	@Test
 
 	public void loginWithInvalidUsername() {
 		login = new LoginPage(driver);
-		login.enterUsername("admin1").enterPassword("admin21").clickSignInButton();//chaining of methods
-		
+		login.enterUsername("admin1").enterPassword("admin21").clickSignInButton();// chaining of methods
+
 		boolean alertMessageForInvalidLogin = login.alertMessageForInvalidLogin();
-		Assert.assertTrue(alertMessageForInvalidLogin, "Login successful for invalid username");
+		Assert.assertTrue(alertMessageForInvalidLogin, Constant.lp_invalid_username);
 	}
 
 	@Test
 	public void loginWithInvalidPassword() {
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername("admin");
-		login.enterPassword("admin1");
-		login.clickSignInButton();
+		login.enterUsername("admin").enterPassword("admin1").clickSignInButton();
 
 		boolean alertMessageForInvalidPassword = login.alertMessageForInvalidLogin();
-		Assert.assertTrue(alertMessageForInvalidPassword, "Login successful for invalild password");
+		Assert.assertTrue(alertMessageForInvalidPassword, Constant.lp_invalid_password);
 
 	}
 
@@ -61,10 +56,8 @@ public class LoginTest extends BaseClass {
 
 		login = new LoginPage(driver);
 		login.enterUsername(username).enterPassword(password).clickSignInButton();
-		// login.enterPassword(password);
-		// login.clickSignInButton();
+
 		boolean alertMessageForInvalidUserNameAndPassword = login.alertMessageForInvalidLogin();
-		Assert.assertTrue(alertMessageForInvalidUserNameAndPassword,
-				"Login successful for invalild username and password");
+		Assert.assertTrue(alertMessageForInvalidUserNameAndPassword, Constant.lp_invalid_username_password);
 	}
 }
