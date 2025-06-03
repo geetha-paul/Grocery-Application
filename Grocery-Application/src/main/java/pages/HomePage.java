@@ -23,7 +23,7 @@ public class HomePage {
 	@FindBy(xpath = "//p[text()='Manage News']")
 	WebElement manageNews;
 
-	public CategoryPage clickOnCategory() { 
+	public CategoryPage clickOnCategory() {
 		manageCategory.click();
 		return new CategoryPage(driver);
 	}

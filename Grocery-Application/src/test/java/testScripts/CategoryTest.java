@@ -16,15 +16,17 @@ public class CategoryTest extends BaseClass {
 	LoginPage loginpage;
 	HomePage homepage;
 	CategoryPage category;
+	public String categoryName = "Hair Accesories for kids";
+	public String updatedCategoryName = "Hair clips for kids";
 
 	@Test(priority = 1, groups = { "smoke" })
 	public void verifyAddNewCategoryWithValidDetails() throws IOException {
 		loginpage = new LoginPage(driver);
 
 		homepage = loginpage.loginByUsingExcelData();
-		category = homepage.clickOnCategory().clickOnNewButton().enterCategory("Hair Accesories for kids")
-				.clickOnSelectGroup().addImageToCategory().scrollToViewSaveButton().clickOnSaveButton(); // chaining of
-																											// methods
+		category = homepage.clickOnCategory().clickOnNewButton().enterCategory(categoryName).clickOnSelectGroup()
+				.addImageToCategory().scrollToViewSaveButton().clickOnSaveButton(); // chaining of
+																					// methods
 
 		Assert.assertTrue(category.isSuccessAlertDisplayed(), Constant.category_success_alert);
 	}
@@ -59,7 +61,7 @@ public class CategoryTest extends BaseClass {
 		loginpage = new LoginPage(driver);
 		homepage = loginpage.loginByUsingExcelData();
 
-		category = homepage.clickOnCategory().editCategoryItem("Hair clips for kids");
+		category = homepage.clickOnCategory().editCategoryItem(updatedCategoryName);
 
 		Assert.assertTrue(category.isEditSuccessAlertDisplayed(), Constant.category_edit_success);
 	}

@@ -12,5 +12,5 @@ public class RetryListener implements IAnnotationTransformer {
 			final Method testMethod) {
 		annotation.setRetryAnalyzer(retry.Retry.class);
 	}
-	
+
 }

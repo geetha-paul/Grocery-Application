@@ -15,7 +15,7 @@ public class ManageContact {
 	public ManageContact(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		 generalutility = new GeneralUtilities(driver);
+		generalutility = new GeneralUtilities(driver);
 	}
 
 	@FindBy(xpath = "//a[@role='button']")
