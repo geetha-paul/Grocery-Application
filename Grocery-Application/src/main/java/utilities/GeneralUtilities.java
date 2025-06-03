@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-//dropdown(3 methods and javasript executor-all methods), alert, radio,drag and drop,Action class
+
 
 public class GeneralUtilities {
 
