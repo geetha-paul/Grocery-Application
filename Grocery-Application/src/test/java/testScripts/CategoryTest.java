@@ -25,8 +25,7 @@ public class CategoryTest extends BaseClass {
 
 		homepage = loginpage.loginByUsingExcelData();
 		category = homepage.clickOnCategory().clickOnNewButton().enterCategory(categoryName).clickOnSelectGroup()
-				.addImageToCategory().scrollToViewSaveButton().clickOnSaveButton(); // chaining of
-																					// methods
+				.addImageToCategory().scrollToViewSaveButton().clickOnSaveButton(); 
 
 		Assert.assertTrue(category.isSuccessAlertDisplayed(), Constant.category_success_alert);
 	}

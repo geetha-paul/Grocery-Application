@@ -5,10 +5,8 @@
 		</parameter>
 
 		<classes>
-			<class name="testScript.LoginTest">
+			<class name="testScripts.LoginTest">
 			</class>
-
-
 		</classes>
 	</test>
 
@@ -17,7 +15,7 @@
 		</parameter>
 
 		<classes>
-			<class name="testScript.CategoryTest">
+			<class name="testScripts.CategoryTest">
 			</class>
 
 

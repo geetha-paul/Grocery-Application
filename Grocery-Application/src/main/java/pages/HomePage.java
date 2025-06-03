@@ -10,10 +10,12 @@ import utilities.GeneralUtilities;
 public class HomePage {
 
 	public WebDriver driver;
+	GeneralUtilities generalUtilities;
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		generalUtilities = new GeneralUtilities(driver);
 	}
 
 	@FindBy(xpath = "//p[text()='Manage Category']")
@@ -24,19 +26,19 @@ public class HomePage {
 	WebElement manageNews;
 
 	public CategoryPage clickOnCategory() {
-		manageCategory.click();
+		generalUtilities.clickJavaScriptExecutor(manageCategory, driver);
+
 		return new CategoryPage(driver);
 	}
 
 	public ManageContact clickOnManageContact() {
 
-		GeneralUtilities generalUtilities = new GeneralUtilities(driver);
 		generalUtilities.clickJavaScriptExecutor(manageContact, driver);
 		return new ManageContact(driver);
 	}
 
 	public ManageNewsPage clickOnManageNews() {
-		GeneralUtilities generalUtilities = new GeneralUtilities(driver);
+
 		generalUtilities.clickJavaScriptExecutor(manageNews, driver);
 		return new ManageNewsPage(driver);
 	}
