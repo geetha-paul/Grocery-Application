@@ -10,8 +10,8 @@
           <include name="verifyAddNewCategoryWithValidDetails"/>
           <include name="verifyDeleteCategoryItemSuccessfully"/>
           <include name="verifyEditCategoryWithValidDetails"/>
-          <include name="driverQuit"/>
           <include name="verifySearchCategoryWithValidKeyword"/>
+          <include name="driverQuit"/>
           <include name="verifyChangeCategoryStatusSuccessfully"/>
         </methods>
       </class> <!-- testScripts.CategoryTest -->

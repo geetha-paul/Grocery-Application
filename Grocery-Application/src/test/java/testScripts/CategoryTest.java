@@ -10,22 +10,21 @@ import constants.Constant;
 import pages.CategoryPage;
 import pages.HomePage;
 import pages.LoginPage;
+import utilities.ExcelUtililty;
 
 public class CategoryTest extends BaseClass {
 
 	LoginPage loginpage;
 	HomePage homepage;
 	CategoryPage category;
-	public String categoryName = "Hair Accesories for kids";
-	public String updatedCategoryName = "Hair clips for kids";
 
 	@Test(priority = 1, groups = { "smoke" })
 	public void verifyAddNewCategoryWithValidDetails() throws IOException {
 		loginpage = new LoginPage(driver);
-
+		String categoryName = ExcelUtililty.getStringData(1, 0, "category");
 		homepage = loginpage.loginByUsingExcelData();
 		category = homepage.clickOnCategory().clickOnNewButton().enterCategory(categoryName).clickOnSelectGroup()
-				.addImageToCategory().scrollToViewSaveButton().clickOnSaveButton(); 
+				.addImageToCategory().scrollToViewSaveButton().clickOnSaveButton();
 
 		Assert.assertTrue(category.isSuccessAlertDisplayed(), Constant.category_success_alert);
 	}
@@ -59,7 +58,7 @@ public class CategoryTest extends BaseClass {
 	public void verifyEditCategoryWithValidDetails() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = loginpage.loginByUsingExcelData();
-
+		String updatedCategoryName = ExcelUtililty.getStringData(1, 1, "category");
 		category = homepage.clickOnCategory().editCategoryItem(updatedCategoryName);
 
 		Assert.assertTrue(category.isEditSuccessAlertDisplayed(), Constant.category_edit_success);
