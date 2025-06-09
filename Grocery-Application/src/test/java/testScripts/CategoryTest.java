@@ -22,7 +22,7 @@ public class CategoryTest extends BaseClass {
 	public void verifyAddNewCategoryWithValidDetails() throws IOException {
 		loginpage = new LoginPage(driver);
 		String categoryName = ExcelUtililty.getStringData(1, 0, "category");
-		homepage = loginpage.loginByUsingExcelData();
+		homepage = loginpage.loginByUsingExcelDataForValidLogin();
 		category = homepage.clickOnCategory().clickOnNewButton().enterCategory(categoryName).clickOnSelectGroup()
 				.addImageToCategory().scrollToViewSaveButton().clickOnSaveButton();
 
@@ -33,7 +33,7 @@ public class CategoryTest extends BaseClass {
 
 	public void verifySearchCategoryWithValidKeyword() throws IOException {
 		loginpage = new LoginPage(driver);
-		homepage = loginpage.loginByUsingExcelData();
+		homepage = loginpage.loginByUsingExcelDataForValidLogin();
 		category = homepage.clickOnCategory().searchNewlyAddedCategory().clickOnSearchBox().enterSearchText()
 				.clickOnSearchSubmitButton();
 
@@ -44,7 +44,7 @@ public class CategoryTest extends BaseClass {
 
 	public void verifyResetSearchFunctionality() throws IOException {
 		loginpage = new LoginPage(driver);
-		homepage = loginpage.loginByUsingExcelData();
+		homepage = loginpage.loginByUsingExcelDataForValidLogin();
 
 		category = homepage.clickOnCategory().searchNewlyAddedCategory().clickOnSearchBox().enterSearchText()
 				.clickOnSearchSubmitButton().resetSearchBox();
@@ -57,7 +57,7 @@ public class CategoryTest extends BaseClass {
 
 	public void verifyEditCategoryWithValidDetails() throws IOException {
 		loginpage = new LoginPage(driver);
-		homepage = loginpage.loginByUsingExcelData();
+		homepage = loginpage.loginByUsingExcelDataForValidLogin();
 		String updatedCategoryName = ExcelUtililty.getStringData(1, 1, "category");
 		category = homepage.clickOnCategory().editCategoryItem(updatedCategoryName);
 
@@ -68,7 +68,7 @@ public class CategoryTest extends BaseClass {
 
 	public void verifyChangeCategoryStatusSuccessfully() throws IOException {
 		loginpage = new LoginPage(driver);
-		homepage = loginpage.loginByUsingExcelData();
+		homepage = loginpage.loginByUsingExcelDataForValidLogin();
 
 		category = homepage.clickOnCategory().changeTheStatusOfItems();
 
@@ -79,7 +79,7 @@ public class CategoryTest extends BaseClass {
 
 	public void verifyDeleteCategoryItemSuccessfully() throws IOException {
 		loginpage = new LoginPage(driver);
-		homepage = loginpage.loginByUsingExcelData();
+		homepage = loginpage.loginByUsingExcelDataForValidLogin();
 		category = homepage.clickOnCategory().deleteCategory();
 		Assert.assertTrue(category.isDeleteSuccessAlertDisplayed(), Constant.delete_success_alert);
 	}

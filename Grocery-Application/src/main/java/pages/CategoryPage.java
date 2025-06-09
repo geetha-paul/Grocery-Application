@@ -1,27 +1,29 @@
 package pages;
 
-import java.time.Duration;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import constants.Constant;
 import utilities.FileUploadUtility;
 import utilities.GeneralUtilities;
+import utilities.WaitUtility;
 
 public class CategoryPage {
 
 	public WebDriver driver;
 	GeneralUtilities generalUtilities;;
+	WaitUtility waitUtlity;
 
 	public CategoryPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		generalUtilities = new GeneralUtilities(driver);
+		waitUtlity = new WaitUtility();
 	}
 
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
@@ -101,9 +103,7 @@ public class CategoryPage {
 	}
 
 	public CategoryPage clickOnSaveButton() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(saveButton));
-
+		waitUtlity.waitUntilElementToBeVisible(driver, saveButton);
 		generalUtilities.clickJavaScriptExecutor(saveButton, driver);
 
 		return this;

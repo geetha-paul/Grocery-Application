@@ -48,15 +48,10 @@ public class ManageContact {
 
 	public ManageContact mandatoryFieldsCheck() {
 		phoneNumberField.clear();
-
 		emailField.clear();
-
 		addressField.clear();
-
 		deliveryTimeField.clear();
-
 		deliveryChargeLimitField.clear();
-
 		generalutility.clickJavaScriptExecutor(updateButton, driver);
 
 		return this;

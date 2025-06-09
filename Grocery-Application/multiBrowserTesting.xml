@@ -1,28 +1,18 @@
 <suite name="multiBrowserTesting" parallel="tests" thread-count="2">
-
 	<test name="ChromeTest" thread-count="5">
 		<parameter name="browser" value="Chrome">
 		</parameter>
-
 		<classes>
 			<class name="testScripts.LoginTest">
 			</class>
-
-
 		</classes>
 	</test>
-
 	<test name="EdgeTest" thread-count="5">
 		<parameter name="browser" value="Edge">
 		</parameter>
-
 		<classes>
 			<class name="testScripts.CategoryTest">
 			</class>
-
-
 		</classes>
 	</test>
-
-
 </suite>

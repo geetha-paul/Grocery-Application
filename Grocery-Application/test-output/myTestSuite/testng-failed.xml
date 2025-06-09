@@ -8,12 +8,18 @@
   </listeners>
   <test thread-count="5" name="myTest(failed)">
     <classes>
+      <class name="testScripts.LoginTest">
+        <methods>
+          <include name="loginWithInvalidUsername"/>
+          <include name="initialiseBrowser"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testScripts.LoginTest -->
       <class name="testScripts.CategoryTest">
         <methods>
           <include name="initialiseBrowser"/>
-          <include name="verifyAddNewCategoryWithValidDetails"/>
-          <include name="verifyEditCategoryWithValidDetails"/>
           <include name="driverQuit"/>
+          <include name="verifySearchCategoryWithValidKeyword"/>
         </methods>
       </class> <!-- testScripts.CategoryTest -->
     </classes>

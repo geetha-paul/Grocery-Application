@@ -21,7 +21,7 @@ public class ManageContactTest extends BaseClass {
 
 	public void verifyEditContactWithValidDetails() throws IOException {
 		loginpage = new LoginPage(driver);
-		homepage = loginpage.loginByUsingExcelData();
+		homepage = loginpage.loginByUsingExcelDataForValidLogin();
 		String phone = FakerUtility.generatePhoneNumber();
 		String email = FakerUtility.generateEmail();
 		String address = FakerUtility.generateAddress();
@@ -36,7 +36,7 @@ public class ManageContactTest extends BaseClass {
 	@Test(priority = 2)
 	public void verifyResetEditContactFormFunctionality() throws IOException {
 		loginpage = new LoginPage(driver);
-		homepage = loginpage.loginByUsingExcelData();
+		homepage = loginpage.loginByUsingExcelDataForValidLogin();
 		manageContact = homepage.clickOnManageContact().clickOnEditButton().resetContact();
 		Assert.assertTrue(manageContact.isContactTitleDisplayed(), Constant.mc_contact_title_displayed);
 	}

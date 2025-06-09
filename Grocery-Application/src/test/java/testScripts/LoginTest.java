@@ -16,29 +16,25 @@ public class LoginTest extends BaseClass {
 
 	@Test(groups = "smoke")
 	public void loginWithValidCredentials() throws IOException {
-		LoginPage login = new LoginPage(driver);
-
-		login.loginByUsingExcelData();
+		login = new LoginPage(driver);
+		login.loginByUsingExcelDataForValidLogin();
 		boolean isHomePageLoaded = login.isHomePageLoaded();
-
 		Assert.assertTrue(isHomePageLoaded, Constant.lp_verify_login_with_valid_data);
 	}
 
 	@Test
 
-	public void loginWithInvalidUsername() {
+	public void loginWithInvalidUsername() throws IOException {
 		login = new LoginPage(driver);
-		login.enterUsername("admin1").enterPassword("admin21").clickSignInButton();// chaining of methods
-
+		login.loginByUsingExcelDataForInvalidUsername();
 		boolean alertMessageForInvalidLogin = login.alertMessageForInvalidLogin();
 		Assert.assertTrue(alertMessageForInvalidLogin, Constant.lp_invalid_username);
 	}
 
 	@Test
-	public void loginWithInvalidPassword() {
-		LoginPage login = new LoginPage(driver);
-		login.enterUsername("admin").enterPassword("admin1").clickSignInButton();
-
+	public void loginWithInvalidPassword() throws IOException {
+		login = new LoginPage(driver);
+		login.loginByUsingExcelDataForInvalidPassword();
 		boolean alertMessageForInvalidPassword = login.alertMessageForInvalidLogin();
 		Assert.assertTrue(alertMessageForInvalidPassword, Constant.lp_invalid_password);
 
@@ -56,7 +52,6 @@ public class LoginTest extends BaseClass {
 
 		login = new LoginPage(driver);
 		login.enterUsername(username).enterPassword(password).clickSignInButton();
-
 		boolean alertMessageForInvalidUserNameAndPassword = login.alertMessageForInvalidLogin();
 		Assert.assertTrue(alertMessageForInvalidUserNameAndPassword, Constant.lp_invalid_username_password);
 	}

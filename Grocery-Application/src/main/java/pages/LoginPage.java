@@ -16,6 +16,7 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+
 	}
 
 	@FindBy(xpath = "//input[@name='username']")
@@ -39,7 +40,7 @@ public class LoginPage {
 		return this;
 	}
 
-	public HomePage clickSignInButton() { // chaining of pages
+	public HomePage clickSignInButton() {
 		signInButton.click();
 		return new HomePage(driver);
 	}
@@ -50,12 +51,31 @@ public class LoginPage {
 	}
 
 	public boolean alertMessageForInvalidLogin() {
+
 		return errorMessageForInvalidCredentials.isDisplayed();
 	}
 
-	public HomePage loginByUsingExcelData() throws IOException {
+	public HomePage loginByUsingExcelDataForValidLogin() throws IOException {
 		String username = ExcelUtililty.getStringData(1, 0, "loginPage");
 		String password = ExcelUtililty.getStringData(1, 1, "loginPage");
+		usernameField.sendKeys(username);
+		passwordField.sendKeys(password);
+		signInButton.click();
+		return new HomePage(driver);
+	}
+
+	public HomePage loginByUsingExcelDataForInvalidUsername() throws IOException {
+		String username = ExcelUtililty.getStringData(3, 0, "loginPage");
+		String password = ExcelUtililty.getStringData(3, 1, "loginPage");
+		usernameField.sendKeys(username);
+		passwordField.sendKeys(password);
+		signInButton.click();
+		return new HomePage(driver);
+	}
+
+	public HomePage loginByUsingExcelDataForInvalidPassword() throws IOException {
+		String username = ExcelUtililty.getStringData(4, 0, "loginPage");
+		String password = ExcelUtililty.getStringData(4, 1, "loginPage");
 		usernameField.sendKeys(username);
 		passwordField.sendKeys(password);
 		signInButton.click();
